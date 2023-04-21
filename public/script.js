@@ -28,7 +28,8 @@ messageForm.addEventListener('submit', async (event) => {
     // Clear the input field
     messageInput.value = '';
 
-    /* UNCOMMENT IN STEP 2
+
+
     // Get the bot's response and image
     const [botMessage, imageURL] = await Promise.all([
       getBotResponse(userMessage),
@@ -40,7 +41,7 @@ messageForm.addEventListener('submit', async (event) => {
     messages.innerHTML += `<div class="message bot-message">${botMessage}</div>`;
     // UNCOMMENT IN STEP 3
     //messages.innerHTML += `<img class="bot-image" src="${imageURL}" alt="Generated image"/>`;
-    */
+    
 
     // Scroll to the bottom of the messages container
     messages.scrollTop = messages.scrollHeight;
