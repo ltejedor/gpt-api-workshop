@@ -27,16 +27,18 @@ A combination of things required for security reasons and a desire to use real-w
 - Deploy our site so that others can use it
 
 ## Step 0: Playground
+
 GPT Playground lets you interact with the model, adjust its parameters, and customize its behavior.
 
 [Explore GPT Playground](https://platform.openai.com/playground?mode=chat&model=gpt-3.5-turbo)
 
-- _Complete_: This mode is designed for text completion tasks. You provide a prompt, and the AI model will generate a continuation of the text based on your input. It's particularly useful for generating creative content or when you need assistance in finishing sentences or paragraphs. 
-- _Chat_ (we're using this today!): In this mode, the AI model behaves like a conversational partner, responding to a series of messages as if you were having a back-and-forth conversation. 
+- _Complete_: This mode is designed for text completion tasks. You provide a prompt, and the AI model will generate a continuation of the text based on your input. It's particularly useful for generating creative content or when you need assistance in finishing sentences or paragraphs.
+- _Chat_ (we're using this today!): In this mode, the AI model behaves like a conversational partner, responding to a series of messages as if you were having a back-and-forth conversation.
 - _Insert_: The Insert mode allows you to specify a location within a given text where the AI model should generate a relevant insertion.
 - _Edit_: In Edit mode, the AI model is given a piece of text with specific areas marked for improvement. GPT will then generate suggested revisions.
 
 _Within Chat:_
+
 - Temperature: Temperature controls the randomness of the AI's output. A higher temperature (e.g., 1.0) will result in more diverse and creative responses, while a lower temperature (e.g., 0.2) will make the output more focused and deterministic. A very low temperature may cause the model to be overly repetitive.
 - Maximum Length: This parameter determines the maximum number of tokens (words or word pieces) the AI can generate in its response.
 - Top P: top_p shrinks or grows the “pool” of available tokens to choose from, the domain to select over. 1=big pool, 0=small pool. Within that pool, each token has a probability of coming next. By using a smaller Top P value, you are restricting the model to a narrower pool of words with higher probabilities. This results in more deterministic and conservative responses that closely follow the input context. Conversely, a higher Top P value allows for a larger pool of words to be considered, making the AI's output more diverse and creative. Also known as "nucleus sampling," it filters the generated tokens based on their cumulative probability, selecting only those tokens that contribute to the given probability (e.g., 0.9).
@@ -47,35 +49,42 @@ _Within Chat:_
 
 [Make a Github account](https://github.com/)
 
-Clone the Workshop Repo
+[Clone the Workshop Repository](https://github.com/ltejedor/gpt-api-workshop)
 
-Clone GitHub Repo
-Open in Codespaces to edit
-![](https://cdn.glitch.global/bef53b9d-b68c-4b41-967d-60d00b39effb/codespace-button.png?v=1681927555940)
+Open in Codespaces by clicking "Code", "Codespaces", "Create codespace on main"
 
-Start a server from codespaces:
-`npm install`
-`node server.js`
-Click “view in browser”
-![](https://cdn.glitch.global/bef53b9d-b68c-4b41-967d-60d00b39effb/terminal.png?v=1681927895072)
-
-
-## Step 2: GPT API
-
-![](https://apipheny.io/wp-content/uploads/2020/08/api-ui.png)
-
-*Interested in learning more? [Mozilla's Deep Dive into APIs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)*
-
-In the world of Chat GPT, APIs are more important than ever. 
+![](https://cdn.glitch.global/bef53b9d-b68c-4b41-967d-60d00b39effb/Screen%20Shot%202023-04-21%20at%209.46.58%20AM.png?v=1682084827071)
 
 Create a file called `.env` and paste in `API_KEY=insert API key from Whatsapp here`
 
 _Note: You'll eventually have to set up your own private key with your OpenAI account and replace this if you want to keep working on this project or start a new one._
 
+Start a server from codespaces. In the terminal, type:
+
+- `npm install`
+- `npm run dev`
+- Click “view in browser”
+  ![](https://cdn.glitch.global/bef53b9d-b68c-4b41-967d-60d00b39effb/terminal.png?v=1681927895072)
+  
+Explore the codebase:
+- public/index.html: HTML file that structures the content of your web page. This is what loads when you open your home page.
+- public/style.css: Cascading Style Sheets (CSS) file that controls the visual appearance of the web page
+- public/script.js: JavaScript (JS) file containing client-side scripts for the web page
+- api/: server-side scripts that manage API requests. Executes on the server, processing and responding to client-side requests
+- README.md: Markdown file containing documentation and instructions for the workshop
+
+## Step 2: GPT API
+
+![](https://apipheny.io/wp-content/uploads/2020/08/api-ui.png)
+
+_Interested in learning more? [Mozilla's Deep Dive into APIs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)_
+
+In the world of Chat GPT, APIs are more important than ever.
+
 Delete the "Uncomment in Step 2" Comment Code
 
-
 ## Step 2.5: Chat GPT Assisted Code Break
+
 Use the class names to promp Chat GPT for CSS styling:
 
 Example (simple): `Write CSS to make a button of class submit-button green with white text`
@@ -96,7 +105,21 @@ Delete the "Uncomment in Step 3" Comment Code
 
 ## Step 4: Deploying Code
 
-Deploy site to Vercel
+[Create a Vercel Account](https://vercel.com/)
+
+Run `vercel login` in the terminal and follow the prompts to authenticate your Vercel account.
+
+Run `vercel deploy` to deploy your project.
+
+Open the URL that appears after setup.
+
+An error appears! Log into Vercel and add the API key in Environment Variables under Project "Settings"
+
+![](https://cdn.glitch.global/bef53b9d-b68c-4b41-967d-60d00b39effb/Screen%20Shot%202023-04-21%20at%2010.24.28%20AM.png?v=1682087075599)
+
+Redeploy code
+
+Woohoo! Your project is LIVE and working!
 
 ## What to do next with LLMS?
 
