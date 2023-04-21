@@ -28,8 +28,8 @@ messageForm.addEventListener('submit', async (event) => {
     // Clear the input field
     messageInput.value = '';
 
-
-    /* UNCOMMENT FOR STEP 2
+    // UNCOMMENT THE MULTI-LINE COMMENT BELOW FOR STEP 2
+    /* 
     // Get the bot's response and image
     const [botMessage, imageURL] = await Promise.all([
       getBotResponse(userMessage),
