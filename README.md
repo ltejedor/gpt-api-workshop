@@ -49,8 +49,6 @@ _Within Chat:_
 
 [Make a Github account](https://github.com/)
 
-[Clone the Workshop Repository](https://github.com/ltejedor/gpt-api-workshop)
-
 Open in Codespaces by clicking "Code", "Codespaces", "Create codespace on main"
 
 ![](https://cdn.glitch.global/bef53b9d-b68c-4b41-967d-60d00b39effb/Screen%20Shot%202023-04-21%20at%209.46.58%20AM.png?v=1682084827071)
