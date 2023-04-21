@@ -9,5 +9,8 @@
       { "src": "/api/completions", "dest": "/api/completions.js" },
       { "src": "/api/image_gen", "dest": "/api/image_gen.js" },
       { "src": "/(.*)", "dest": "/public/$1" }
-    ]
+    ], 
+    "env": {
+        "API_KEY": "API_KEY"
+    }
   }

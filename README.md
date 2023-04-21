@@ -62,7 +62,8 @@ _Note: You'll eventually have to set up your own private key with your OpenAI ac
 Start a server from codespaces. In the terminal, type:
 
 - `npm install`
-- `npm run dev`
+- `npm install -g vercel`
+- `vercel dev`
 - Click “view in browser”
   ![](https://cdn.glitch.global/bef53b9d-b68c-4b41-967d-60d00b39effb/terminal.png?v=1681927895072)
   
@@ -105,6 +106,11 @@ Delete the "Uncomment in Step 3" Comment Code
 
 ## Step 4: Deploying Code
 
+Add the API key under vercel.json env:
+`"env": {
+      "API_KEY": "API KEY IN QUOTES HERE"
+    }`
+
 [Create a Vercel Account](https://vercel.com/)
 
 Run `vercel login` in the terminal and follow the prompts to authenticate your Vercel account.
@@ -112,10 +118,6 @@ Run `vercel login` in the terminal and follow the prompts to authenticate your V
 Run `vercel deploy` to deploy your project.
 
 Open the URL that appears after setup.
-
-An error appears! Log into Vercel and add the API key in Environment Variables under Project "Settings"
-
-![](https://cdn.glitch.global/bef53b9d-b68c-4b41-967d-60d00b39effb/Screen%20Shot%202023-04-21%20at%2010.24.28%20AM.png?v=1682087075599)
 
 Redeploy code
 
