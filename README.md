@@ -26,6 +26,12 @@ A combination of things required for security reasons and a desire to use real-w
 - Customizable Chatbot with Image Functionality
 - Deploy our site so that others can use it
 
+## Setup
+
+[Make a Github account](https://github.com/)
+
+[Create a Vercel Account](https://vercel.com/)
+
 ## Step 0: Playground
 
 GPT Playground lets you interact with the model, adjust its parameters, and customize its behavior.
@@ -46,8 +52,6 @@ _Within Chat:_
 - Presence penalty: The presence penalty controls the repetition of words or phrases that have already appeared in the input or earlier parts of the generated text. A higher presence penalty (e.g., 1) will discourage repetition, while a lower penalty (e.g., -1) will allow the AI to reuse words or phrases more freely.
 
 ## Step 1: Set up Front-end
-
-[Make a Github account](https://github.com/)
 
 Open in Codespaces by clicking "Code", "Codespaces", "Create codespace on main"
 
@@ -108,8 +112,6 @@ Add the API key under vercel.json env:
 `"env": {
       "API_KEY": "API KEY IN QUOTES HERE"
     }`
-
-[Create a Vercel Account](https://vercel.com/)
 
 Run `vercel login` in the terminal and follow the prompts to authenticate your Vercel account.
 
